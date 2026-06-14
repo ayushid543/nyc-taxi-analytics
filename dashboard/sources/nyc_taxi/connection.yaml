@@ -1,0 +1,4 @@
+name: nyc_taxi
+type: duckdb
+options:
+  filename: ../../../dbt_project/dev.duckdb

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_taxi_trips
+    description: "Cleaned and filtered NYC Yellow Taxi trips for January 2024"
+    columns:
+      - name: pickup_datetime
+        description: "Trip start timestamp"
+        tests:
+          - not_null
+      - name: fare_amount
+        description: "Base fare in USD"
+        tests:
+          - not_null
+      - name: trip_distance
+        description: "Trip distance in miles"
+        tests:
+          - not_null
+      - name: vendor_id
+        description: "Taxi vendor identifier"
+        tests:
+          - not_null
+
+  - name: mart_hourly_trips
+    description: "Aggregated trip volume and revenue by hour of day"
+
+  - name: mart_payment_summary
+    description: "Trip count and revenue broken down by payment type"
