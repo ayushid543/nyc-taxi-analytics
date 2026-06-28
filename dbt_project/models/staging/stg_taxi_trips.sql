@@ -1,5 +1,5 @@
 with source as (
-    select * from read_parquet('C:/Users/ayude/nyc_taxi_analytics/data/raw/yellow_tripdata_2024-01.parquet')
+    select * from read_parquet('../data/raw/yellow_tripdata_2024-01.parquet')
 ),
 
 cleaned as (
